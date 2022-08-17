@@ -20,3 +20,8 @@ class Questions():
         for result in self.response:
             self.inc_ans.append(result['incorrect_answers'])
         return self.inc_ans
+    def get_difficulty(self):
+        self.diffs = []
+        for result in self.response:
+            self.diffs.append(result['difficulty'])
+        return self.diffs
